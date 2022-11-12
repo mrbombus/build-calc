@@ -1,0 +1,221 @@
+@media screen and (max-width:1024px){
+    .material-info {
+        width: 55%;
+    }
+    
+        
+    .material-info p:last-child {
+        color: #b6b6b6;
+        font-size: 14px;
+    }
+    .param {
+        width: 49.2%;
+    }
+}
+
+@media screen and (max-width:960px){
+    .slot {
+        padding: 0;
+        margin: 0 3px;
+        width: 24%;
+    }
+    .param {
+        width: 50%;
+    }
+    
+}
+
+@media screen and (max-width:800px){
+
+    .wrapSlots {
+        padding: 0;
+    }
+    .main-bottom  div > a{
+        margin: 30px 0 0 25px;
+
+    }
+}
+
+@media screen and (max-width:760px){
+
+    .material-info {
+        width: 50%;
+    }
+    
+    .material-info p:first-child {
+        font-size: 14px;
+    }
+    .material-info p:last-child {
+        font-size: 12px;
+    }
+    
+}
+@media screen and (max-width:755px){
+    .slot {
+        margin: 0 1% 1% 0;
+        padding: 0;
+        width: 48.5%;
+    }
+    
+    .material-info {
+        width: 70%;
+    }
+    .material-info p:first-child {
+        font-size: 16px;
+    }
+    
+    
+    .material-info p:last-child {
+        font-size: 15px;
+    }
+    
+    .param {
+        float: left;
+        width: 100%;
+    }
+    .preview {
+        height: 565px;
+        width: 100%;
+    }
+    .sl {
+        width: 100%;
+    }
+    .summ {
+        margin: 2% 25%;
+        text-align: center;
+    }
+    .price {
+        margin: 15px 25% 25px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:720px){
+    .main-bottom > div {
+        width: 65%;
+    }
+    .main-bottom  div > a{
+        margin: 15px 0 0 25px;
+    }
+}
+
+@media screen and (max-width:580px){
+    .material-info {
+        width: 60%;
+    }
+    
+    .main-bottom > div {
+        width: 57%;
+    }
+    
+}
+@media screen and (max-width:420px){
+    .material-info {
+        width: 50%;
+    }
+    
+    .material-info p:first-child {
+        font-size: 14px;
+    }
+    .material-info p:last-child {
+        font-size: 13px;
+    }
+    .main-bottom > a:last-child {
+        margin: 17px 5px 0 0;
+    }
+    .main-bottom div > a {
+        font-size: 14px;
+        margin: 20px 0 0 5px;
+    }
+}
+
+@media screen and (max-width:380px){
+    
+    .material {
+        margin-top: 15px;
+        padding: 0 10%;
+        width: 100%;
+    }
+    .slot {
+        margin: 0 0 1% 0;
+        padding: 0;
+        width: 100%;
+    }
+    .material-info {
+        width: 70%;
+    }
+    
+    .material-info p:first-child {
+        font-size: 16px;
+    }
+    .material-info p:last-child {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:350px){
+    
+    .material {
+        margin-top: 15px;
+        padding: 0;
+        width: 100%;
+    }
+    .slot {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .material-info {
+        width: 70%;
+    }
+    
+    .material-info p:first-child {
+        font-size: 16px;
+    }
+    .material-info p:last-child {
+        font-size: 14px;
+    }
+    img.building{
+        max-width:280px;
+    }
+    
+    
+    .main-bottom {
+        height: 98px;
+    }
+    .main-bottom > a:last-child {
+        margin: 27px 5px 0 0;
+    }
+    .main-bottom div > a {
+        font-size: 18px;
+        margin: 15px 0 0 5px;
+    }
+    
+    
+    .main-bottom div > a {
+        font-size: 15px;
+        margin: 20px 0 0 5px;
+    }
+}
+@media screen and (max-width:320px){
+    
+    .main-bottom > div {
+        display:none;
+    }
+    .main-bottom > a:last-child {
+        margin: 27px 10% 0 0;
+    }
+    .price {
+        font-size: 25px;
+    }
+    input#amount {
+        left: 150px;
+    }
+}
+
+@media screen and (max-width:280px){
+    
+    .material-info {
+        width: 60%;
+    }
+}

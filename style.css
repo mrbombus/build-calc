@@ -1,0 +1,574 @@
+html{
+    height:100%;
+}
+.header{
+    width:100%;
+    margin: auto;
+    border-bottom: 3px solid #eeeeee;
+    height:80px;
+}
+.header-main{
+    width:1110px;
+    margin:auto;
+    height:100%;
+}
+
+.header-main a {
+    box-sizing: padding-box;
+    display: block;
+    float: left;
+    height: 100%;
+    padding-top: 16px;
+    width: 230px;
+}
+
+ul.header {
+    border: medium none;
+    box-sizing: padding-box;
+    float: right;
+    font-family: Calibri,sans-serif;
+    font-size: 14px;
+    padding-top: 30px;
+    width: 620px;
+}
+
+ul.header li {
+    display: inline-block;
+    float: left;
+    margin: 0 18px;
+    width: auto;
+}
+ul.header li:last-child{
+    margin-right:0;
+}
+
+ul.header li a {
+    color: #444;
+    display: block;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    width: auto;
+}
+ul.header li a:hover{
+    color:#fed28d;
+}
+.wrapSlots{
+    max-width: 1140px;
+    padding: 15px;
+    margin: auto;
+    height: auto;
+}
+.slots {
+    height: auto;
+    padding-top: 30px;
+    width: 100%;
+}
+.slot {
+    background: #f7f7f7 url("/img/slots-bg.jpg") repeat scroll 0 0;
+    float: left;
+    font-family: Calibri,sans-serif;
+    height: 320px;
+    margin: 0 11px;
+    padding: 0 15px;
+    width: 20%;
+}
+.slot:first-child {
+    margin-left: 0;
+}
+.slot:last-child {
+    margin-right: 0;
+}
+
+p.slot-title {
+    color: #777777;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 22px 0 8px 16px;
+}
+
+.material {
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 72px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.material-info {
+    background: #fff none repeat scroll 0 0;
+    float: left;
+    box-sizing: border-box;
+    height: 100%;
+    padding-left: 4%;
+    width: 59%;
+}
+div.material11 {
+    background: rgba(0, 0, 0, 0) url("img/materials.jpg") no-repeat scroll 0 0;
+    display: block;
+    float: left;
+    height: 72px;
+    width: 72px;
+}
+
+div.material12 {
+    background: rgba(0, 0, 0, 0) url("img/materials.jpg") no-repeat scroll 0 center;
+    display: block;
+    float: left;
+    height: 72px;
+    width: 72px;
+}
+div.material13 {
+    background: rgba(0, 0, 0, 0) url("img/materials.jpg") no-repeat scroll 0 -144px;
+    display: block;
+    float: left;
+    height: 72px;
+    width: 72px;
+}
+div.material21 {
+    background: rgba(0, 0, 0, 0) url("img/materials.jpg") no-repeat scroll -72px 0;
+    display: block;
+    float: left;
+    height: 72px;
+    width: 72px;
+}
+div.material22 {
+    background: rgba(0, 0, 0, 0) url("img/materials.jpg") no-repeat scroll -72px center;
+    display: block;
+    float: left;
+    height: 72px;
+    width: 72px;
+}
+div.material23 {
+    background: rgba(0, 0, 0, 0) url("img/materials.jpg") no-repeat scroll -72px -144px;
+    display: block;
+    float: left;
+    height: 72px;
+    width: 72px;
+}
+div.material31 {
+    background: rgba(0, 0, 0, 0) url("img/materials.jpg") no-repeat scroll -144px 0;
+    display: block;
+    float: left;
+    height: 72px;
+    width: 72px;
+}
+div.material32 {
+    background: rgba(0, 0, 0, 0) url("img/materials.jpg") no-repeat scroll -144px center;
+    display: block;
+    float: left;
+    height: 72px;
+    width: 72px;
+}
+div.material33 {
+    background: rgba(0, 0, 0, 0) url("img/materials.jpg") no-repeat scroll -144px -144px;
+    display: block;
+    float: left;
+    height: 72px;
+    width: 72px;
+}
+div.material41 {
+    background: rgba(0, 0, 0, 0) url("img/materials.jpg") no-repeat scroll -216px 0;
+    display: block;
+    float: left;
+    height: 72px;
+    width: 72px;
+}
+div.material42 {
+    background: rgba(0, 0, 0, 0) url("img/materials.jpg") no-repeat scroll -216px center;
+    display: block;
+    float: left;
+    height: 72px;
+    width: 72px;
+}
+div.material43 {
+    background: rgba(0, 0, 0, 0) url("img/materials.jpg") no-repeat scroll -216px -144px;
+    display: block;
+    float: left;
+    height: 72px;
+    width: 72px;
+}
+
+a.material-post {
+    background: white none repeat scroll 0 0;
+    box-sizing: border-box;
+    float: right;
+    height: 100%;
+    text-decoration: none;
+}
+
+.selectedmaterial{
+    border-bottom: 5px solid orange;
+}
+
+a.material-post:hover{
+    border-bottom: 5px solid #feb900;
+}
+
+.material-info p:first-child {
+    color: #444;
+    margin-top: 8px;
+}
+
+.material-info p:last-child{
+    color:#b6b6b6;
+    margin-top: 8px;
+}
+
+.maindiv {
+    clear: both;
+    height: auto;
+    margin: auto;
+    padding-top: 15px;
+    width: 100%;
+}
+.param {
+    float: left;
+    height: auto;
+    margin-bottom: 20px;
+    width: 48%;
+}
+
+/******************/
+
+.sl {
+    background: #f7f7f7 url("/img/slots-bg.jpg") repeat scroll 0 0;
+    height: 115px;
+    margin-bottom: 15px;
+    position: relative;
+    width: 98%;
+}
+
+.sl label {
+    color: #444;
+    display: block;
+    font-family: Calibri,sans-serif;
+    font-weight: bold;
+    padding: 15px 0 0 20px;
+}
+
+input#amount {
+    color: #444 !important;
+    left: 245px;
+    padding-top: 3px;
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    width: 50px;
+}
+
+.ui-slider {
+    margin: 20px;
+    border:none;
+}
+
+.ui-corner-all {
+    border-radius: 0;
+}
+.ui-slider-horizontal {
+    height: 0.2em;
+}
+
+.ui-widget-content {
+    background: #cbcbcb none repeat scroll 0 0;
+}
+
+.ui-slider .ui-slider-handle {
+    cursor: pointer;
+    height: 24px;
+    position: absolute;
+    width: 24px;
+    z-index: 2;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+    margin-left: -0.6em;
+    top: -0.6em;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: #feb900 none repeat scroll 0 0;
+    border: 1px solid #cccccc;
+    color: #1c94c4;
+    font-weight: bold;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: none;
+}
+
+.lowPoint {
+    color: #444;
+    font-size: 15px;
+    font-weight: bold;
+    left: 18px;
+    position: absolute;
+    top: 65px;
+}
+
+.highPoint {
+    color: #444;
+    font-size: 15px;
+    font-weight: bold;
+    right: 18px;
+    position: absolute;
+    top: 65px;
+}
+/****************/
+
+
+
+.summ {
+    color: #444;
+    font-weight: bold;
+}
+
+.price {
+    color: #feb900;
+    font-family: Calibri,sans-serif;
+    font-size: 38px;
+    font-weight: bold;
+    margin: 15px 0 25px;
+}
+div.select {
+    border-top: 2px solid #cbcbcb;
+    border-left: 2px solid #cbcbcb;
+    border-right: 2px solid #cbcbcb;
+    box-sizing: border-box;
+    color: #777777;
+    cursor: pointer;
+    font-family: Calibri,sans-serif;
+    font-weight: bold;
+    height: 45px;
+    padding: 12px 0 12px 14px;
+    position: relative;
+    width: 98%;
+    display: none;
+}
+
+.showSelect {
+    background: #feb900 none repeat scroll 0 0;
+    border: 0 none !important;
+    color: #ffffff !important;
+}
+
+.setBorderBottom{
+    border-bottom: 5px solid orange;
+}
+div.select.last{
+    border-bottom: 2px solid #cbcbcb;
+}
+p.select span {
+    background: rgba(0, 0, 0, 0) url("img/drop-img.png") repeat scroll 0 -7px;
+    display: block;
+    height: 7px;
+    position: absolute;
+    right: 15px;
+    top: 18px;
+    width: 12px;
+}
+
+div.drop {
+    display: none;
+    width: 98%;
+}
+
+h3.drop {
+    color: #777777;
+    display: inherit;
+    font-family: Calibri,sans-serif;
+    font-size: 18px;
+    margin: 10px 0 0 45px;
+}
+ul.drop {
+    display: none;
+    font-family: Calibri,sans-serif;
+    list-style-image: url("img/main-bottom-arrow.png");
+    list-style-type: square;
+    padding: 20px 0 15px 32px;
+}
+
+ul.drop li {
+    height: auto;
+    margin: 7px 0;
+    padding-left: 10px;
+    color: #777777;
+}
+
+.preview{
+    float:left;
+    width:50%;
+    height: 590px;
+}
+
+.imgwrapper {
+    height: 565px;
+    margin: 0 auto;
+    position: relative;
+    width: 300px;
+}
+img.building {
+    position: absolute;
+    display:none;
+}
+img.foundation {
+    right: 5px;
+    top: 200px;
+}
+
+img.wall {
+    right: 4px;
+    top: 83px;
+}
+
+img.overlap {
+    right: 5px;
+    top: 60px;
+}
+img.top {
+    right: 8px;
+    top: 65px;
+}
+
+.main-bottom {
+    background: rgba(0, 0, 0, 0) url("img/main-bottom-bg.jpg") repeat scroll 0 0;
+    clear: both;
+    height: 80px;
+    width: 100%;
+}
+
+.main-bottom > div {
+    float: left;
+    height: 80px;
+    width: 75%;
+}
+.main-bottom  div > a{
+    color: white;
+    display: block;
+    float: left;
+    font-family: Calibri,sans-serif;
+    font-size: 20px;
+    margin: 30px 0 0 55px;
+    text-decoration: none;
+}
+
+.main-bottom a:hover{
+    text-decoration: underline;
+}
+
+.main-bottom > a:last-child {
+    background: white none repeat scroll 0 0;
+    box-sizing: border-box;
+    color: #444;
+    display: block;
+    float: right;
+    font-family: Calibri;
+    font-size: 14px;
+    font-weight: bold;
+    height: 45px;
+    position: relative;
+    margin: 17px 30px 0 0;
+    padding: 16px 0 0 15px;
+    text-decoration: none;
+    width: 130px;
+}
+
+.main-bottom img {
+    left: 104px;
+    position: absolute;
+    top: 15px;
+}
+
+
+.footer {
+    background: rgba(0, 0, 0, 0) url("img/footer-bg.jpg") repeat scroll -5px 0;
+    height: 350px;
+    width: 100%;
+}
+
+.footer-main {
+    height: 100%;
+    margin: auto;
+    width: 1110px;
+}
+.copyrights {
+    background: #333333 none repeat scroll 0 0;
+    height: 60px;
+    width: 100%;
+}
+.copyright-main {
+    margin: auto;
+    padding-top: 23px;
+    width: 1110px;
+}
+.copyrights p, a {
+    color: #797b80;
+    font-family: Calibri,sans-serif;
+    font-size: 12px;
+}
+.copyrights  a:hover{
+    text-decoration: none;
+}
+
+.line {
+    background: rgba(0, 0, 0, 0) url("img/line.jpg") no-repeat scroll 0 0;
+    box-sizing: border-box;
+    color: white;
+    float: left;
+    font-family: Calibri,sans-serif;
+    height: 300px;
+    margin: 50px 10px 0 0;
+    width: 24.1%;
+}
+
+.line h3 {
+    margin: 25px 0 35px;
+}
+.first p {
+    font-size: 13px;
+    line-height: 22px;
+}
+.info{
+    margin-bottom: 30px;
+
+}
+p.grey{
+    color:#605f5f;
+}
+.grey > a {
+    text-decoration: none;
+}
+.grey > a:hover{
+    text-decoration: underline;
+}
+.second.line > ul {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 0 15px;
+}
+.second.line li {
+    list-style-image: url("img/list-arrow.png");
+    margin: 16px 0;
+}
+
+.third table {
+    border: medium none;
+    float: left;
+    height: 168px;
+    width: 255px;
+}
+
+
+
+.fourth.line > p {
+    font-size: 14px;
+    margin: 32px 0;
+    padding-left: 30px;
+    position: relative;
+}
+.fourth.line img {
+    left: 0;
+    position: absolute;
+    top: 0;
+}

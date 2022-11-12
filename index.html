@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Будівництво котеджів</title>
+
+    <link rel="stylesheet" href="jquery-ui-1.11.4/jquery-ui.css">
+    <link rel="stylesheet" href="reset.css" type="text/css" media="screen" >
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" >
+    <link rel="stylesheet" href="responsive.css" type="text/css" media="screen and (max-width: 1140px)" >
+    <script src="jQuery v1.11.3.js" type="text/javascript"></script>
+    <script src="jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <script src="ui-touch.js"></script>
+
+</head>
+<body>
+
+    <div class="wrapSlots">
+        <div class="slots">
+            <div class="slot">
+                <p class="slot-title">ТИП ФУНДАМЕНТА:</p>
+                <div id='foundation1' class="material mat1">
+                    <div class="material11"> </div>
+                    <div class="material-info">
+                        <p>Стрічковий фундамент</p>
+                        <p>від 340 грн за м&#178;</p>
+                    </div> 
+                </div>
+                <div id='foundation2' class="material mat1">
+                    <div class="material12"> </div>
+                    <div class="material-info" >
+                        <p>Цокольний поверх</p>
+                        <p>від 340 грн за м&#178;</p>
+                    </div>
+                </div> 
+                 
+                <div id='foundation3' class="material mat1">
+                    <div class="material13"> </div>
+                    <div class="material-info" >
+                        <p>Монолітна плитка</p>
+                        <p>від 340 грн за м&#178;</p>
+                    </div>
+                </div> 
+            </div>
+            <div class="slot">
+                <p class="slot-title">МАТЕРІАЛ СТІН:</p>
+                <div id='wall1' class="material mat2">
+                    <div class="material21"> </div>
+                    <div class="material-info">
+                        <p>Газоблок</p>
+                        <p>від 340 грн за м&#178;</p>
+                    </div>
+                </div>
+                <div id='wall2' class="material mat2">
+                    <div class="material22" > </div>
+                    <div class="material-info" >
+                        <p>Цегла</p>
+                        <p>від 340 грн за м&#178;</p>
+                    </div>
+                </div>
+                <div id='wall3' class="material mat2">
+                    <div class="material23" > </div>
+                    <div class="material-info" >
+                        <p>Керамоблок</p>
+                        <p>від 340 грн за м&#178;</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slot">
+                <p class="slot-title">ТИП ПЕРЕКРИТТЯ:</p>
+                <div id='overlap1' class="material mat3">
+                    <div class="material31" > </div>
+                    <div class="material-info">
+                        <p>З/Б моноліт</p>
+                        <p>від 340 грн за м&#178;</p>
+                    </div>
+                </div>
+                <div id='overlap2' class="material mat3">
+                    <div class="material32"> </div>
+                    <div class="material-info">
+                        <p>Дерев'яне</p>
+                        <p>від 340 грн за м&#178;</p>
+                    </div>
+                </div>
+                <div id='overlap3' class="material mat3">
+                    <div class="material33" > </div>
+                    <div class="material-info" >
+                        <p>Терива</p>
+                        <p>від 340 грн за м&#178;</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slot">
+                <p class="slot-title">ТИП ПОКРІВЛІ:</p>
+                <div id='top1' class="material mat4">
+                    <div class="material41" > </div>
+                    <div class="material-info" >
+                        <p>Метало-черепиця</p>
+                        <p>від 340 грн за м&#178;</p>
+                    </div>
+                </div>
+                <div id='top2' class="material mat4">
+                    <div class="material42"> </div>
+                    <div class="material-info">
+                        <p>Бітумна черепиця</p>
+                        <p>від 340 грн за м&#178;</p>
+                    </div>
+                </div>
+                <div id='top3' class="material mat4">
+                    <div class="material43" > </div>
+                    <div class="material-info" >
+                        <p>Керамічна черепиця</p>
+                        <p>від 340 грн за м&#178;</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="maindiv">
+            <div class="param">
+                <div class="sl">   
+                    <p>
+                      <label for="amount">ПЛОЩА В М&#178;:</label>
+                      <input type="text" id="amount"  style="border:0; color:#feb900; font-weight:bold;">
+                    </p>
+                    <div id="slider-range-max"></div>
+                    <p class="lowPoint">0</p>
+                    <p class="highPoint">1000</p>  
+                </div>
+
+                <p class="summ">СУМАРНА ВАРТІСТЬ В ГРН.:</p>
+                <p class="price">Виберіть метраж</p>
+                
+                <!-- ****** FOUNDATION ******* -->
+                <div class="select foundation toshowFound foundation1">
+                    <p class="select">СТРІЧКОВИЙ ФУНДАМЕНТ<span></span></p>
+                </div>
+                <div class='drop'>
+                    <h3 class="drop">Підготовка майданчика:</h3>
+                    <ul class="drop foundation1">
+                        <li>Підвіз битовки (рахується окремо)</li>
+                        <li>Тимчасові свердловина освітлення і електроживлення (рахується окремо)</li>
+                    </ul>
+                    <h3 class="drop">Будівництво стрічкового фундаменту (на глибину 1,2 м):</h3>
+                    <ul class="drop foundation1">
+                        <li>ГГеодезична розбивка майданчика з винесенням осей, механізована розробка траншеї під стрічку, контроль риття траншеї, ручна доробка грунту (без вивезення)</li>
+                        <li>Облаштування піщаної основи 100мм з трамбуванням</li>
+                        <li>Облаштування бетонної підготовки 100мм бетоном марки В7,5</li>
+                        <li>Облаштування гідроізоляції (Техноеласт П)</li>
+                        <li>Установка опалубки, в'язка арматурних каркасів AIII (за проектом), установка закладних (гільз) під комунікації</li>
+                        <li>Укладання бетону марки В22,5</li>
+                        <li>Облаштування гідроізоляції (бітумна обмазочна)</li>
+                        <li>Облаштування чорнового бетонної підлоги 100мм бетоном марки В7,5</li>
+                        
+                    </ul>
+                </div>
+                <div class="select foundation toshowFound foundation2">
+                    <p class="select">ЦОКОЛЬНИЙ ПОВЕРХ<span></span></p>
+                </div>
+                <div class="drop">
+                    <h3 class="drop">Будівництво цокольного (підвального) поверху (h = 2,5 м):</h3>
+                    <ul class="drop foundation2">
+                        <li>Геодезична розбивка майданчика з винесенням осей, механізована розробка котловану під підвал, контроль земляних робіт, ручна доробка грунту (без вивезення)</li>
+                        <li>Закладання піщаної основи 100мм з трамбуванням</li>
+                        <li>Облаштування бетонної підготовки 100мм бетоном марки В7,5</li>
+                        <li>Облаштування гідроізоляції (Техноеласт П)</li>
+                        <li>Установка опалубки, в'язка арматурних каркасів AIII верхньої і нижньої сітки (за проектом), установка закладних (гільз) під комунікації</li>
+                        <li>Бетонування фундаментної плити 300мм (бетон марки В22,5)</li>
+                        <li>Бетонування стін цокольного поверху висотою 2,5 м (бетон марки В22,5)</li>
+                        <li>Бетонування з / б перекриття цокольного поверху (бетон марки В22,5)</li>
+                        <li>Облаштування гідроізоляції (бітумна обмазочна)</li>
+                    </ul>
+                </div>
+                <div class="select foundation toshowFound foundation3">
+                    <p class="select">МОНОЛІТНА ПЛИТКА<span></span></p>
+                </div>
+                <div class="drop">
+                    <h3 class="drop">Будівництво фундаментної плити (300мм):</h3>
+                    <ul class="drop foundation3">
+                        <li>Геодезична розбивка майданчика з винесенням осей, механізоване відкопування грунту, контроль земляних робіт, ручна доробка грунту (без вивезення)</li>
+                        <li>Закладання піщаної основи 100мм з трамбуванням</li>
+                        <li>Облаштування бетонної підготовки 100мм бетоном марки В7,5</li>
+                        <li>Облаштування гідроізоляції (Техноеласт П)</li>
+                        <li>Установка опалубки, вязка арматурных каркасов AIII (по проекту), установка закладных (гильз) под коммуникации</li>
+                        <li>Бетонування плити бетоном марки В22,5 (пристрій фундаментної плити 300мм)</li>
+                        <li>Облаштування гідроізоляції (бітумна обмазочна)</li>
+                    </ul>
+                </div>
+                <!-- ******* WALL ******** -->
+                <div class="select wall toshowWall wall1">
+                    <p class="select">ГАЗОБЛОК<span></span></p>
+                </div>
+                <div class="drop">
+                    <h3 class="drop">Будівництво стін з газобетону товщиною 300мм:</h3>
+                    <ul class="drop wall1">
+                        <li>Кладка зовнішніх несучих стін з газобетонних блоків з армуванням 1-го і кожного 4-го ряду, (блоки UDK 600/200/300 D500, клей, арматура АІІІ d8)</li>
+                        <li>Кладка внутрішніх стін з газобетону 200мм</li>
+                        <li>Кладка перегородок з армуванням з газобетонних блоків 100мм</li>
+                        <li>Облаштування віконних і дверних перемичок з U-блоків з армуванням (U-блоки, арматура АІІІ d12, бетон)</li>
+                        <li>Встановлення монолітних поясів з U-блоків (U-блоки, арматура АІІІ d12, бетон)</li>
+                    </ul>
+                </div>
+                <div class="select wall toshowWall wall2">
+                    <p class="select">ЦЕГЛА<span></span></p>
+                </div>
+                <div class="drop">
+                    <h3 class="drop">Будівництво стін з цегли завтовшки 250мм:</h3>
+                    <ul class="drop wall2">
+                        <li>Кладка зовнішніх стін з червоної цегли, (цегла М100)</li>
+                        <li>Кладка внутрішніх стін з червоної цегли (цегла М100)</li>
+                        <li>Кладка перегородок з червоної цегли 125мм</li>
+                        <li>Облаштування віконних і дверних з / б перемичок</li>
+                        <li>Будівництво монолітних поясів</li>
+                    </ul>
+                </div>
+                <div class="select wall toshowWall wall3">
+                    <p class="select">КЕРАМОБЛОК<span></span></p>
+                </div>
+                <div class="drop">
+                    <h3 class="drop">Будівництво стін з керамічних блоків Кератерм 38 P + W:</h3>
+                    <ul class="drop wall3">
+                        <li>Кладка зовнішніх стін з керамічних блоків Кератерм 38 P + W 380х248х238мм</li>
+                        <li>Кладка внутрішніх стін з керамічних блоків Кератерм 38 P + W 380х248х238мм</li>
+                        <li>Кладка перегородкових стін з керамічних блоків Кератерм 12 P + W 120х380х238мм</li>
+                        <li>Теплоізоляційна кладочна суміш МУР-16</li>
+                        <li>Встановлення з / б перемичок у віконних і дверних отворах (арматура АІІІ d12, бетон)</li>
+                        <li>Будівництво монолітних армопоясів</li>
+                    </ul>
+                </div>
+                <!-- ****** OVERLAP ******* -->
+                <div class="select overlap toshowOverlap overlap1">
+                    <p class="select">З/Б МОНОЛІТ<span></span></p>
+                </div>
+                <div class="drop">
+                    <h3 class="drop">Будівництво монолітного з / б перекриття 160-180мм:</h3>
+                    <ul class="drop overlap1">
+                        <li>Облаштування горизонтальної опалубки для монолітного перекриття з установкою стійок і балок, в'язка арматури AIII</li>
+                        <li>Облаштування плити перекриття 160-180мм (бетон марки В22,5)</li>
+                        <li>Утеплення по периметру перекриття (50мм)</li>
+                        <li>Облаштування сходів (рахується окремо)</li>
+                    </ul>
+                </div>
+                <div class="select overlap toshowOverlap overlap2">
+                    <p class="select">ДЕРЕВ'ЯНЕ<span></span></p>
+                </div>
+                <div class="drop">
+                    <h3 class="drop">Будівництво дерев'яного перекриття:</h3>
+                    <ul class="drop overlap2">
+                        <li>Монтаж балок (брус 200х50мм, руберойд) на монолітний пояс, антисептування</li>
+                        <li>Облаштування чорнової підлоги по балках (дошка шпунтована 40х100мм)</li>
+                        <li>Нижня підшивка балок (вагонка 22х80мм)</li>
+                        <li>Облаштування шумоізоляції (мінеральна вата, пароізоляція)</li>
+                        <li>Облаштування сходів (рахується окремо)</li>
+                    </ul>
+                </div>
+                <div class="select overlap toshowOverlap overlap3">
+                    <p class="select">ТЕРИВА<span></span></p>
+                </div>
+                <div class="drop">
+                    <h3 class="drop">Будівництво полегшеного перекриття терива 240мм:</h3>
+                    <ul class="drop overlap3">
+                        <li>Облаштування залізобетонних балок і пустотілих блоків Терива з установкою стійок і балок, в'язка арматури AIII</li>
+                        <li>Облаштування плити перекриття 240мм (бетон марки В22,5)</li>
+                        <li>Утепление по периметру перекрытия (50мм)</li>
+                        <li>Устройство лестницы (считается отдельно)</li>
+                    </ul>
+                </div>
+                <!-- ****** TOP ******* -->
+                <div class="select top top1 toshowTop last">
+                    <p class="select">МЕТАЛО-ЧЕРЕПИЦЯ<span></span></p>
+                </div>
+                <div class="drop">
+                    <h3 class="drop">Облаштування покрівлі з металочерепицею:</h3>
+                    <ul class="drop top1">
+                        <li>Монтаж кроквяної системи з бруса (монтаж, антисептування, гідроізоляція)</li>
+                        <li>Укладання теплоізоляції (утеплювач 200 мм URSA), пароізоляції (Juta), гідро-вітробар'ера</li>
+                        <li>Облаштування покрівлі з металочерепиці (профіль типу MONTERREY) 0,5мм</li>
+                    </ul>
+                </div>
+                <div class="select top top2 toshowTop last">
+                    <p class="select">БІТУМНА ЧЕРЕПИЦЯ<span></span></p>
+                </div>
+                <div class="drop">
+                    <h3 class="drop">Облаштування покрівлі з бітумною черепицею:</h3>
+                    <ul class="drop top2">
+                        <li>Монтаж кроквяної системи з бруса (монтаж, антисептування, гідроізоляція)</li>
+                        <li>Укладання теплоізоляції (утеплювач 200 мм URSA), пароізоляції (Juta), гідро-вітробар'єра</li>
+                        <li>OSB 12х1250х2500мм</li>
+                        <li>Гнучка (бітумна) черепиця KATEPAL, підкладковий килим Сейфіті СБС 2</li>
+                    </ul>
+                </div>
+                <div class="select top top3 toshowTop last">
+                    <p class="select">КЕРАМІЧНА ЧЕРЕПИЦЯ<span></span></p>
+                </div>
+                <div class="drop">
+                    <h3 class="drop">Облаштування покрівлі з керамічною черепицею:</h3>
+                    <ul class="drop top3">
+                        <li>Монтаж кроквяної системи з бруса (монтаж, антисептування, гідроізоляція)</li>
+                        <li>Укладання теплоізоляції (утеплювач 200 мм URSA), пароізоляції (Juta), гідро-вітробар'єра</li>
+                        <li>Облаштування покрівлі з керамічною черепицею типу ROBEN</li>
+                    </ul>
+                </div>
+                </div>
+            <div class="preview">
+                <div class="imgwrapper">
+                    <img src="img/foundation1.png" alt="" class="building foundation foundation1" />
+                    <img src="img/foundation2.png" alt="" class="building foundation foundation2" />
+                    <img src="img/foundation3.png" alt="" class="building foundation foundation3" />
+                    <img src="img/wall1.png" alt="" class="building wall wall1" />
+                    <img src="img/wall2.png" alt="" class="building wall wall2" />
+                    <img src="img/wall3.png" alt="" class="building wall wall3" />
+                    <img src="img/overlap1.png" alt="" class="building overlap overlap1" />
+                    <img src="img/overlap2.png" alt="" class="building overlap overlap2" />
+                    <img src="img/overlap3.png" alt="" class="building overlap overlap3" />
+                    <img src="img/top1.png" alt="" class="building top top1" />
+                    <img src="img/top2.png" alt="" class="building top top2" />
+                    <img src="img/top3.png" alt="" class="building top top3" />
+                </div>
+            </div>
+            <div class="main-bottom">
+                <div>
+                    <a href="#">Looking for a quality and affordable constructor for your next project?</a>
+                </div>
+                    <a href="#">GET A QUOTE <img src="img/main-bottom-arrow.png" alt=""></a>
+                
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            $(document).ready(function(){ 
+					
+                   var foundation = 0;
+                   var wall = 0;
+                   var overlap = 0;
+                   var top = 0;
+                   
+                $('.building').hide();
+
+                /*******SLIDER START UI*******/
+							
+                            $( "#slider-range-max" ).slider({
+                              range: "min",
+                              min: 0,
+                              max: 1000,
+                              value: 0,
+                              slide: function( event, ui ) {
+                                $( "#amount" ).val( ui.value );
+							
+							
+                                if((foundation!=0) && (wall!=0) && (overlap!=0) && (top!=0)){
+                                    var metr = ui.value;
+                                    var finalPrice = foundation * metr + wall * metr + overlap * metr + top * metr;
+                                    $('p.price').text(finalPrice); 
+                                }
+
+                              }
+                            });
+							
+							
+                            $( "#amount" ).val( $( "#slider-range-max" ).slider( "value" ) );
+                            
+                            ///  Ввод количества метров квадратных
+                            var metrProcent = 0;
+                            $('input#amount').change(function () {
+                                var slider = $('.ui-slider').css('width');
+                                var metr = parseInt($(this).val());
+                              if((typeof(metr)== 'number') && (metr>0) && (metr<1001) ){
+                                metrProcent = metr*0.1;
+                              }
+
+                              $('.ui-slider-range').css('width',metrProcent+'%')
+                              $('span.ui-slider-handle').css('left',metrProcent+'%')
+                              var finalPrice = parseInt((foundation * metr) + (wall * metr) + (overlap * metr) + (top * metr)) * 100;
+                              $('p.price').text(finalPrice);
+                            })
+                                
+                 /*******SLIDER END*******/
+				 
+				
+                
+                function toConstruct(x, xn, nick){
+                    $("img[class*='"+x+"']").hide();
+                     $("div[class*='"+nick+"']").next().slideUp('100', function () { //закрываем контент под выбранным блоком
+                      $(this).children().slideDown('100')
+                    }).end().hide();   
+                    $("img."+xn +",div."+xn).show();
+                    if($('.slot').css('width')== ($(window).width())+'px'){  
+                        if(x=='top'){
+                          $('html,body').animate({scrollTop:$('.param').offset().top}, 700);
+                        }else{
+                          $('html,body').animate({scrollTop:$('#'+xn).parents().next('.slot').offset().top},700);
+                        }  
+                    }
+                }
+                
+                /******** BUILD CONSTRUCTION AND MATERIAL LIST *********/
+                $("#foundation1").click(function(event){
+                  foundation = 340; // PRICE FOR FOUNDATION 1
+                  toConstruct('foundation', 'foundation1','toshowFound');
+                  return false;
+                })
+                
+                $("#foundation2").click(function(){
+                  foundation = 340; // PRICE FOR FOUNDATION 2
+                  toConstruct('foundation', 'foundation2','toshowFound');
+                  return false;
+                })
+                $("#foundation3").click(function(){
+                  foundation = 340; // PRICE FOR FOUNDATION 3
+                  toConstruct('foundation', 'foundation3','toshowFound');
+                  return false;
+                })
+
+                $("#wall1").click(function(event){
+                  wall = 340; // PRICE FOR WALL 1
+                  toConstruct('wall', 'wall1','toshowWall');
+                  return false;
+                })
+                $("#wall2").click(function(event){
+                  wall = 340; // PRICE FOR WALL 2
+                  toConstruct('wall', 'wall2','toshowWall');
+                  return false;
+                })
+                $("#wall3").click(function(event){
+                  wall = 340; // PRICE FOR WALL 3
+                  toConstruct('wall', 'wall3','toshowWall');
+                  return false;
+                })
+
+                $("#overlap1").click(function(event){
+                  overlap = 340; // PRICE FOR OVERLAP 1
+                  toConstruct('overlap', 'overlap1','toshowOverlap');
+                  return false;
+                })
+                $("#overlap2").click(function(event){  
+                  overlap = 340; // PRICE FOR OVERLAP 2
+                  toConstruct('overlap', 'overlap2','toshowOverlap');
+                  return false;
+                })
+                $("#overlap3").click(function(event){ 
+                  overlap = 340; // PRICE FOR OVERLAP 3
+                  toConstruct('overlap', 'overlap3','toshowOverlap');
+                  return false;
+                })
+
+                $("#top1").click(function(event){ 
+                  top = 340; // PRICE FOR TOP 1
+                  toConstruct('top', 'top1','toshowTop');
+                  return false;
+                })
+                $("#top2").click(function(event){
+                  top = 340; // PRICE FOR TOP 2
+                  toConstruct('top', 'top2','toshowTop');
+                  return false;
+                })
+                $("#top3").click(function(event){
+                  top = 340; // PRICE FOR TOP 3
+                  toConstruct('top', 'top3','toshowTop');
+                  return false;
+                })
+
+                /******** HOVER EFFECT  *********/
+
+                $('div.mat1, div.mat2,div.mat3,div.mat4').mouseover(function(){
+                    if($(this).find('.material-info').hasClass('setBorderBottom')){
+                        $(this).find('.material-info').addClass('setBorderBottom');
+                    }else{
+                        $(this).find('.material-info').css('border-bottom', '5px solid orange')
+                    }
+                  
+                })
+                $('div.mat1, div.mat2,div.mat3,div.mat4').mouseleave(function(){
+                
+                    if($(this).find('.material-info').hasClass('setBorderBottom')){
+                        $(this).find('.material-info').addClass('setBorderBottom');
+                    }else{
+                        $(this).find('.material-info').css('border-bottom', 'none');
+                    }
+                })
+                
+                
+                
+                /******** SELECTED EFFECT  *********/
+                var statusMat1 = 0;
+                var statusMat2 = 0;
+                var statusMat3 = 0;
+                var statusMat4 = 0;
+                $('.mat1').click(function(){
+                  if(statusMat1 == 0){
+                    $(this).find('div.material-info').addClass('setBorderBottom');
+                    statusMat1 = $(this).attr('id');
+                  }else{
+                    $('div#'+ statusMat1).find('div.material-info').css('border-bottom','none').removeClass('setBorderBottom');
+                    $(this).find('div.material-info').addClass('setBorderBottom');
+                    statusMat1 = $(this).attr('id');
+                  }  
+                })
+                $('.mat2').click(function(){
+                  if(statusMat2 == 0){
+                    $(this).find('div.material-info').addClass('setBorderBottom');
+                    statusMat2 = $(this).attr('id');
+                  }else{
+                    $('div#'+ statusMat2).find('div.material-info').css('border-bottom','none').removeClass('setBorderBottom');
+                    $(this).find('div.material-info').addClass('setBorderBottom');
+                    statusMat2 = $(this).attr('id');
+                  }  
+                })
+                $('.mat3').click(function(){
+                  if(statusMat3 == 0){
+                    $(this).find('div.material-info').addClass('setBorderBottom');
+                    statusMat3 = $(this).attr('id');
+                  }else{
+                    $('div#'+ statusMat3).find('div.material-info').css('border-bottom','none').removeClass('setBorderBottom');
+                    $(this).find('div.material-info').addClass('setBorderBottom');
+                    statusMat3 = $(this).attr('id');
+                  }  
+                })
+                $('.mat4').click(function(){
+                  if(statusMat4 == 0){
+                    $(this).find('div.material-info').addClass('setBorderBottom');
+                    statusMat4 = $(this).attr('id');
+                  }else{
+                    $('div#'+ statusMat4).find('div.material-info').css('border-bottom','none').removeClass('setBorderBottom');
+                    $(this).find('div.material-info').addClass('setBorderBottom');
+                    statusMat4 = $(this).attr('id');
+                  }  
+                })
+                
+                
+                /******** АККОРДЕОН  *********/
+                $('div.select').click(function () {
+                  if ($(this).hasClass('showSelect')) {
+                    $(this).children('p').children('span').css('background', 'rgba(0, 0, 0, 0) url("img/drop-img.png") repeat scroll 0 -7px'); // стрелка ЗАКРЫТО
+                      $(this).removeClass('showSelect').next().slideUp(); //закрываем открытые блоки 
+                    var Luck;
+                  } else {
+                    $('div.showSelect:visible').each(function () {
+                      $(this).children('p').children('span').css('background', 'rgba(0, 0, 0, 0) url("img/drop-img.png") repeat scroll 0 -7px'); // стрелка ЗАКРЫТО
+                      $(this).removeClass('showSelect').next().slideUp(); //закрываем открытые блоки 
+                    })
+                    $(this).next().slideDown('100', function () { //открываем контент под выбранным блоком
+                      $(this).children().slideDown('100')
+                    }).end().addClass('showSelect');
+                    // стрелка ОТКРЫТО
+                    $(this).children('p').children('span').css('background', 'rgba(0, 0, 0, 0) url("img/drop-img.png") repeat scroll 0 0');
+                  }
+                })
+
+            })
+        </script>
+    </div>
+</body>
+</html>
